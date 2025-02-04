@@ -8,12 +8,12 @@ export const CartContext = createContext({
   getProductQuantity: () => 0
 });
 
+// need to create APIs for backend
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
 
   const addToCart = async (productId, productDetails = null) => {
     try {
-      // First update the UI
       setCartItems(prev => {
         const existingItem = prev[productId];
         return {
@@ -27,7 +27,6 @@ export const CartProvider = ({ children }) => {
         };
       });
 
-      // Then make the API call
       const response = await fetch('/api/cart/add', {
         method: 'POST',
         headers: {
@@ -45,14 +44,11 @@ export const CartProvider = ({ children }) => {
       }
     } catch (error) {
       console.error('Error updating cart:', error);
-      // Optionally revert the UI change if the API call fails
-      // You might want to show an error message to the user here
     }
   };
 
   const removeFromCart = async (productId) => {
     try {
-      // First update the UI
       setCartItems(prev => {
         const updatedCart = { ...prev };
         const existingItem = updatedCart[productId];
@@ -69,7 +65,6 @@ export const CartProvider = ({ children }) => {
         return updatedCart;
       });
 
-      // Then make the API call
       const response = await fetch('/api/cart/remove', {
         method: 'POST',
         headers: {
@@ -86,8 +81,6 @@ export const CartProvider = ({ children }) => {
       }
     } catch (error) {
       console.error('Error updating cart:', error);
-      // Optionally revert the UI change if the API call fails
-      // You might want to show an error message to the user here
     }
   };
 
