@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { useProducts, useProductCategories } from "../../hooks/useProducts";
+import { useProducts, useProductCategories } from "../../../hooks/useProducts";
 import { useParams, useNavigate } from 'react-router-dom'
 import { Smartphone, ArrowLeft } from "lucide-react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { CartContext } from "./cart-provider";
-import { QuantityControl } from "./quantity-control";
-import { ProductCard } from "./product-card";
+import { QuantityControl } from "../quantity-control";
+import { ProductCard } from "../product-card";
 
 export const Products = () => {
     const { productCategoryId } = useParams();

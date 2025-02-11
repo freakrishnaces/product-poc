@@ -2,8 +2,8 @@ import React, { useState, createContext, useContext } from 'react'
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/theme/mode-toggle"
 import { ShoppingCart } from 'lucide-react'
-import { CartContext } from './cart-provider'
-import { CartWindow } from './cart-window'
+import { CartContext } from '../cart/cart-provider'
+import { CartWindow } from '../cart/cart-window'
 
 
 export const Header = () => {

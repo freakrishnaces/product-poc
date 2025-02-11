@@ -1,5 +1,5 @@
 import React from "react";
-import { useProductCategories } from "../../hooks/useProducts";
+import { useProductCategories } from "../../../hooks/useProducts";
 import { 
     Smartphone, 
     Laptop, 
