@@ -7,11 +7,11 @@ import {
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
-import { X, Plus, Minus } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 export const CartWindow = ({ isOpen, onClose, cartItems, removeFromCart, addToCart }) => {
   const calculateTotal = () => {
-    return Object.entries(cartItems).reduce((total, [productId, item]) => {
+    return Object.entries(cartItems).reduce((total, [ , item]) => {
       return total + (item.price * item.quantity);
     }, 0);
   };

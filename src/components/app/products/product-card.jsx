@@ -15,7 +15,7 @@ export const ProductCard = memo(({ product }) => {
         <div className="mt-4 flex justify-center">
           <QuantityControl product={product} />
         </div>
-      </div>
+      </div>       
     </div>
   );
 });
