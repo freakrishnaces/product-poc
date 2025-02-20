@@ -21,7 +21,7 @@ import {
   Smartphone,
   Coffee
 } from "lucide-react"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle, CardContent } from "../../common/card"
 
 const recentItems = [
   { icon: FileText, label: 'Document.pdf', time: '2 mins ago' },

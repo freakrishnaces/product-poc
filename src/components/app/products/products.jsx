@@ -2,7 +2,7 @@ import React from "react";
 import { useProducts, useProductCategories } from "../../../hooks/useProducts";
 import { useParams, useNavigate } from 'react-router-dom'
 import { Smartphone, ArrowLeft } from "lucide-react";
-import { ProductCard } from "../product-card";
+import { ProductCard } from "./product-card";
 
 export const Products = () => {
   const { productCategoryId } = useParams();

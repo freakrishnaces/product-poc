@@ -2,12 +2,17 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-import { Header } from "@/components/app/app-header";
-import { ThemeProvider } from "@/components/ui/theme-provider";
-import { RecentActivity } from "@/components/app/recent-activity";
-import { ProductCategories} from "@/components/app/product-categories";
-import { Products } from "@/components/app/products";
-import { CartProvider } from '@/components/app/cart-provider';
+import { Header } from "@/app/header/app-header";
+import { ThemeProvider } from "@/common/theme-provider";
+import { RecentActivity } from "@/app/home/recent-activity";
+import { ProductCategories} from "@/app/products/product-categories";
+import { Products } from "@/app/products/products";
+import { CartProvider } from '@/app/cart/cart-provider';
+import { lazy } from "react";
+
+const RemoteApp = lazy(
+  async () => import('remote/remote-app'),
+);
 
 function App() {
   const queryClient = new QueryClient();
@@ -21,6 +26,7 @@ function App() {
               <Route path='/' element={ <RecentActivity />}/>
               <Route path="/products" element={<ProductCategories />} />
               <Route path='/products/:productCategoryId' element={ <Products/> }/>
+              <Route path='/about' element = { <RemoteApp /> }/>
             </Routes>
           </BrowserRouter>
         </CartProvider>

@@ -4,9 +4,9 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Button } from "@/components/ui/button";
+} from "../../common/dialog";
+import { ScrollArea } from "../../common/scroll-area";
+import { Button } from "../../common/button";
 import { Plus, Minus } from "lucide-react";
 
 export const CartWindow = ({ isOpen, onClose, cartItems, removeFromCart, addToCart }) => {

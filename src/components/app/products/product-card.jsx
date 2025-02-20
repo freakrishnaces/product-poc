@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { QuantityControl } from "./quantity-control";
+import { QuantityControl } from "../quantity-control";
 
 export const ProductCard = memo(({ product }) => {
   return (

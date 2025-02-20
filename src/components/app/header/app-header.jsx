@@ -1,6 +1,6 @@
 import React, { useState, createContext, useContext } from 'react'
-import { Button } from "@/components/ui/button"
-import { ModeToggle } from "@/theme/mode-toggle"
+import { Button } from "../../common/button"
+import { ModeToggle } from "../../../theme/mode-toggle"
 import { ShoppingCart } from 'lucide-react'
 import { CartContext } from '../cart/cart-provider'
 import { CartWindow } from '../cart/cart-window'
@@ -26,7 +26,7 @@ export const Header = () => {
             <a href="/" className="flex items-center text-sm font-medium">
               Home
             </a>
-            <a href="#" className="flex items-center text-sm font-medium">
+            <a href="/about" className="flex items-center text-sm font-medium">
               About
             </a>
             <a href="/products" className="flex items-center text-sm font-medium">
