@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { Button } from "../../common/button"
 import { ModeToggle } from "../../../theme/mode-toggle"
 import { ShoppingCart } from 'lucide-react'
